@@ -10,8 +10,10 @@ namespace WebAppTest.Services
     public class Context :DbContext
     {
         public string DbPath { get; set; }
-        public DbSet<Form> Forms { get; set; }
-        public DbSet<Sprache> Sprachen { get; set; }
+        public DbSet<AnamnesisForm> Anamnese { get; set; }
+
+        public DbSet<MasterDataForm> Stammdaten { get; set; }
+        public DbSet<Language> Sprachen { get; set; }
 
         public Context()
         {
