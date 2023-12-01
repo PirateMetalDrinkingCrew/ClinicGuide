@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using WebAppTest.Models;
 
 namespace WebAppTest.Services
@@ -10,11 +10,11 @@ namespace WebAppTest.Services
         public Service()
         {
             _database = new Context();
-            _database.Database.EnsureCreated();
-            FillDatabase();
         }
-        private void FillDatabase()
+        public async Task FillDatabase()
         {
+            var created = await _database.Database.EnsureCreatedAsync();
+            Console.WriteLine($"Created: {created}");
             // Sprache
             Language german = new Language();
             german.Value = "german";
@@ -149,7 +149,7 @@ namespace WebAppTest.Services
             _database.Anamnese.Add(anamnesisItalian);
 
 
-            _database.SaveChanges();
+            await _database.SaveChangesAsync();
         }
     }
 }
