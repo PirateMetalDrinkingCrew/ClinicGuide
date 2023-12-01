@@ -12,15 +12,15 @@ namespace WebAppTest
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            //builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
-            //.AddNegotiate();
+            builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
+            .AddNegotiate();
 
             builder.Services.AddSingleton<Service>();
-            /*builder.Services.AddAuthorization(options =>
+            builder.Services.AddAuthorization(options =>
             {
                 // By default, all incoming requests will be authorized according to the default policy.
                 options.FallbackPolicy = options.DefaultPolicy;
-            });*/
+            });
             builder.Services.AddRazorPages();
 
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -40,7 +40,7 @@ namespace WebAppTest
 
             app.UseRouting();
 
-            //app.UseAuthorization();
+            app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",

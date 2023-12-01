@@ -42,7 +42,6 @@ namespace WebAppTest.Services
             stammdaten3.Value = "Saluto";
             _database.Forms.Add(stammdaten3);
 
-
             _database.SaveChanges();
         }
     }
