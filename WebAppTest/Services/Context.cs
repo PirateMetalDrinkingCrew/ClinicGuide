@@ -11,8 +11,9 @@ namespace WebAppTest.Services
     {
         public string DbPath { get; set; }
         public DbSet<AnamnesisForm> AnamnesisForm { get; set; }
-
         public DbSet<MasterDataForm> MasterDataForm { get; set; }
+        public DbSet<Anamnesis> Anamnesis { get; set; }
+        public DbSet<MasterData> MasterData { get; set; }
         public DbSet<Language> Language { get; set; }
 
         public Context()
