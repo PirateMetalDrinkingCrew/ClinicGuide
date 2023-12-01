@@ -5,13 +5,14 @@ using WebAppTest.Models;
 
 namespace WebAppTest.Services
 {
-    
+
 
     public class Context :DbContext
     {
+        public DbSet<AnamnesisForm> Anamnese { get; set; }
 
-        public DbSet<Form> Forms { get; set; }
-        public DbSet<Sprache> Sprachen { get; set; }
+        public DbSet<MasterDataForm> Stammdaten { get; set; }
+        public DbSet<Language> Sprachen { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -19,7 +20,7 @@ namespace WebAppTest.Services
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+
         }
     }
 }

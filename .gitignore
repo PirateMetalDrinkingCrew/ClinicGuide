@@ -361,4 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/WebAppTest/WebAppTest - Backup.csproj
+*.db
+*.db-shm
+*.db-wal
