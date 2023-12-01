@@ -20,3 +20,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.container-fluid{
+    display: flex;
+
+}
+
+.card{
+    width: 18rem;
+    margin: 5px;
+}
