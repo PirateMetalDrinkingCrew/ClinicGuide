@@ -28,6 +28,19 @@ namespace WebAppTest.Controllers
             return View();
         }
 
+        public IActionResult FlagGerman()
+        {
+            return View();
+        }
+        public IActionResult FlagItalian()
+        {
+            return View();
+        }
+        public IActionResult FlagFrench()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
