@@ -10,11 +10,11 @@ namespace WebAppTest.Services
         public Service()
         {
             _database = new Context();
-            _database.Database.EnsureCreated();
-            FillDatabase();
         }
-        private void FillDatabase()
+        public async Task FillDatabase()
         {
+            var created = await _database.Database.EnsureCreatedAsync();
+            Console.WriteLine($"Created: {created}");
             // Sprache
             Sprache deutsch = new Sprache();
             deutsch.Wert = "deutsch";
@@ -42,7 +42,7 @@ namespace WebAppTest.Services
             stammdaten3.Value = "Saluto";
             _database.Forms.Add(stammdaten3);
 
-            _database.SaveChanges();
+            await _database.SaveChangesAsync();
         }
     }
 }

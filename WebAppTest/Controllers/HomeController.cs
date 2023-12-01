@@ -1,16 +1,20 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WebAppTest.Models;
+using WebAppTest.Services;
 
 namespace WebAppTest.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly Service _service;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, Service service)
         {
             _logger = logger;
+            _service = service;
+            _service.FillDatabase();
         }
 
         public IActionResult Index()
