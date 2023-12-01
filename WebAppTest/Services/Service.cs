@@ -179,5 +179,32 @@ namespace WebAppTest.Services
                 throw;
             }
         }
+
+        internal void ReadDataBase()
+        {
+            _database.Language.ForEachAsync(x =>
+            {
+                Console.WriteLine($"Language: [{x.Id}] {x.Value}");
+            });
+
+            _database.MasterDataForm.ForEachAsync(x =>
+            {
+                Console.WriteLine($"MasterDataForm: [{x.Id}] {x.FirstName}");
+            });
+
+            _database.MasterData.ForEachAsync(x =>
+            {
+                Console.WriteLine($"MasterData: [{x.Id}] {x.DateOfBirth.ToString("G")}");
+            });
+
+            _database.AnamnesisForm.ForEachAsync(x =>
+            {
+                Console.WriteLine($"AnamnesisForm: [{x.Id}] {x.Fever}");
+            });
+            _database.Anamnesis.ForEachAsync(x =>
+            {
+                Console.WriteLine($"Anamnesis: [{x.Id}] {x.Fever}");
+            });
+        }
     }
 }
