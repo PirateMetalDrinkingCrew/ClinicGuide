@@ -44,7 +44,7 @@ namespace WebAppTest.Services
             masterDataGerman.RefugeeStatus = "Flüchtlingsstatus";
             masterDataGerman.Height = "Größe";
             masterDataGerman.Weight = "Gewicht";
-            _database.Stammdaten.Add(masterDataGerman);
+            _database.MasterDataForm.Add(masterDataGerman);
 
             // french
             MasterDataForm masterDataFrench = new MasterDataForm();
@@ -63,7 +63,7 @@ namespace WebAppTest.Services
             masterDataFrench.RefugeeStatus = "Statut de réfugié";
             masterDataFrench.Height = "Taille";
             masterDataFrench.Weight = "Poids";
-            _database.Stammdaten.Add(masterDataFrench);
+            _database.MasterDataForm.Add(masterDataFrench);
 
             // italian
             MasterDataForm masterDataItalian = new MasterDataForm();
@@ -82,7 +82,7 @@ namespace WebAppTest.Services
             masterDataItalian.RefugeeStatus = "Statut de réfugié";
             masterDataItalian.Height = "Taille ";
             masterDataItalian.Weight = "Poids";
-            _database.Stammdaten.Add(masterDataItalian);
+            _database.MasterDataForm.Add(masterDataItalian);
 
             // Anamnese
             // german
@@ -104,7 +104,7 @@ namespace WebAppTest.Services
             anamnesisGerman.Stroke = "Schlaganfall";
             anamnesisGerman.ThyroidDisease = "Schilddrüsenkrankheit";
             anamnesisGerman.Diabetes = "Diabetes";
-            _database.Anamnese.Add(anamnesisGerman);
+            _database.AnamnesisForm.Add(anamnesisGerman);
 
             // french
             AnamnesisForm anamnesisFrench = new AnamnesisForm();
@@ -125,7 +125,7 @@ namespace WebAppTest.Services
             anamnesisFrench.Stroke = "Accident vasculaire cérébral";
             anamnesisFrench.ThyroidDisease = "Maladie de la thyroïde";
             anamnesisFrench.Diabetes = "Diabète";
-            _database.Anamnese.Add(anamnesisFrench);
+            _database.AnamnesisForm.Add(anamnesisFrench);
 
             // italian
             AnamnesisForm anamnesisItalian = new AnamnesisForm();
@@ -146,7 +146,7 @@ namespace WebAppTest.Services
             anamnesisItalian.Stroke = "Ictus";
             anamnesisItalian.ThyroidDisease = "Malattie della tiroide";
             anamnesisItalian.Diabetes = "Diabete";
-            _database.Anamnese.Add(anamnesisItalian);
+            _database.AnamnesisForm.Add(anamnesisItalian);
 
 
             await _database.SaveChangesAsync();
