@@ -23,6 +23,8 @@ namespace WebAppTest
             });*/
             builder.Services.AddRazorPages();
 
+            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
