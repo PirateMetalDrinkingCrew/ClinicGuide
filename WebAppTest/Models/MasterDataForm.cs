@@ -10,7 +10,7 @@ namespace WebAppTest.Models
         public string FirstName { get; set; }
         public string DateOfBirth	{ get; set; }
         public string Street { get; set; }
-        public string HouseNumber { get; set; } // String wegen möglichen Buchstaben in Hausnummer
+        public string HouseNumber { get; set; }
         public string PlaceOfResidence { get; set; }
         public string Nationality { get; set; }
         public string Gender { get; set; }
