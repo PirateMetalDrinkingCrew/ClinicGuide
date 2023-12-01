@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 using WebAppTest.Models;
 
 namespace WebAppTest.Services
@@ -11,21 +12,40 @@ namespace WebAppTest.Services
         {
             _database = new Context();
         }
-        public async Task FillDatabase()
+        public void FillDatabase()
         {
-            var created = await _database.Database.EnsureCreatedAsync();
-            Console.WriteLine($"Created: {created}");
+            try
+            {
+                var created = _database.Database.EnsureCreated();
+                Console.WriteLine($"Created: {created}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ex: {ex.Message}\n innerex:{ex.InnerException?.Message}");
+            }
             // Sprache
             Language german = new Language();
             german.Value = "german";
+            _database.Language.Add( german );
             Debug.WriteLine($"Sprache: {german.Value} angelegt");
             Language french = new Language();
             french.Value = "french";
+            _database.Language.Add(french);
             Debug.WriteLine($"Sprache: {french.Value} angelegt");
             Language italian = new Language();
             italian.Value = "italian";
+            _database.Language.Add(italian);
             Debug.WriteLine($"Sprache: {italian.Value} angelegt");
-
+            try
+            {
+                var affected =_database.SaveChanges();
+                Console.WriteLine($"affected: {affected}");
+            }
+            catch (Exception ex )
+            {
+                Console.WriteLine($"exception: {ex.Message} inner: {ex.InnerException.Message}");
+                throw;
+            }
             // Stammdaten
             // german
             MasterDataForm masterDataGerman = new MasterDataForm();
@@ -149,7 +169,15 @@ namespace WebAppTest.Services
             _database.AnamnesisForm.Add(anamnesisItalian);
 
 
-            await _database.SaveChangesAsync();
+            try
+            {
+                _database.SaveChanges();
+            }
+            catch (DbUpdateException dbex)
+            {
+                Console.WriteLine(dbex.InnerException?.Message);
+                throw;
+            }
         }
     }
 }

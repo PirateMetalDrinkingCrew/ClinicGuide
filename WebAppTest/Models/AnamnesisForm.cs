@@ -3,7 +3,6 @@ namespace WebAppTest.Models
     public class AnamnesisForm
     {
         public int Id { get; set; }
-        public Language LanguageId { get; set; }
         public string Fever { get; set; } = string.Empty;
         public string Headache { get; set; } = string.Empty;
         public string Cold { get; set; } = string.Empty;
@@ -20,5 +19,6 @@ namespace WebAppTest.Models
         public string Stroke { get; set; } = string.Empty;
         public string ThyroidDisease { get; set; } = string.Empty;
         public string Diabetes { get; set; } = string.Empty;
+        public virtual Language LanguageId { get; set; } = null!;
     }
 }
