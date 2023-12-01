@@ -9,7 +9,7 @@ namespace WebAppTest.Services
 
     public class Context :DbContext
     {
-        public DbSet<Anamnese> Anamnese { get; set; }
+        public DbSet<Anamnesis> Anamnese { get; set; }
 
         public DbSet<MasterData> Stammdaten { get; set; }
         public DbSet<Language> Sprachen { get; set; }
