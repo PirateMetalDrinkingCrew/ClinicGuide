@@ -1,28 +1,20 @@
 ﻿using System.Diagnostics;
-using Microsoft.EntityFrameworkCore;
 using WebAppTest.Models;
 
-
-namespace WebAppTest.Service
+namespace WebAppTest.Services
 {
-    
-
-    public class DbService : DbContext
+    public class Service
     {
-        private DbService _database;
+        private readonly Context _database;
 
-        DbSet<Form> Forms { get; set; }
-        DbSet<Sprache> Sprachen { get; set; }
-
-        public DbService()
+        public Service()
         {
-            _database = new DbService();
+            _database = new Context();
+            _database.Database.EnsureCreated();
             FillDatabase();
         }
-
         private void FillDatabase()
         {
-            _database.Database.EnsureCreated();
             // Sprache
             Sprache deutsch = new Sprache();
             deutsch.Wert = "deutsch";
@@ -49,12 +41,9 @@ namespace WebAppTest.Service
             stammdaten3.Key = "anrede";
             stammdaten3.Value = "Saluto";
             _database.Forms.Add(stammdaten3);
-            _database.SaveChanges();
-        }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=data.sql");
+
+            _database.SaveChanges();
         }
     }
 }

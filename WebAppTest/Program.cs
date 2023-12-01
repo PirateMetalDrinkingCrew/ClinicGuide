@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Negotiate;
-using WebAppTest.Service;
+using WebAppTest.Services;
 
 namespace WebAppTest
 {
@@ -15,7 +15,7 @@ namespace WebAppTest
             //builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
             //.AddNegotiate();
 
-            builder.Services.AddSingleton<DbService>();
+            builder.Services.AddSingleton<Service>();
             /*builder.Services.AddAuthorization(options =>
             {
                 // By default, all incoming requests will be authorized according to the default policy.
