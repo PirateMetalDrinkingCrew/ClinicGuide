@@ -2,7 +2,7 @@ using System;
 
 namespace WebAppTest.Models
 {
-    public class MasterDataForm
+    public class MasterData
     {
         public int Id { get; set; }
         public string Surname { get; set; }

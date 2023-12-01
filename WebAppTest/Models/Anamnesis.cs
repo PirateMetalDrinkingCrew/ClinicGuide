@@ -1,6 +1,6 @@
 namespace WebAppTest.Models
 {
-    public class AnamnesisForm
+    public class Anamnesis
     {
         public int Id { get; set; }
         public bool Fever { get; set; }
