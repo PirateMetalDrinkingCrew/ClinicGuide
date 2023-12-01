@@ -10,11 +10,11 @@ namespace WebAppTest.Services
     public class Context :DbContext
     {
         public string DbPath { get; set; }
+        public DbSet<Language> Language { get; set; }
         public DbSet<AnamnesisForm> AnamnesisForm { get; set; }
         public DbSet<MasterDataForm> MasterDataForm { get; set; }
         public DbSet<Anamnesis> Anamnesis { get; set; }
         public DbSet<MasterData> MasterData { get; set; }
-        public DbSet<Language> Language { get; set; }
 
         public Context()
         {
@@ -24,7 +24,7 @@ namespace WebAppTest.Services
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($"Data Source={DbPath}");
+            optionsBuilder.UseSqlite($"Data Source=data.db");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
