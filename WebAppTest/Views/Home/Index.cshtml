@@ -2,31 +2,31 @@
     ViewData["Title"] = "Home Page";
 }
 
-    <div class="container-fluid">
-        <div class="card" >
-            <div class="card-header text-center">
-                <p>Deutsch</p>
-            </div>
-            <div class="card-body">
-            <a asp-controller="Home" asp-action="FlagGerman"><img src="images/flag-german.png" style="width:100%;" /></a>
-            </div>
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header text-center">
+            <p>Deutsch</p>
         </div>
-        <div class="card">
-            <div class="card-header text-center">
+        <div class="card-body">
+            <a asp-controller="Home" asp-action="CheckLiterate" asp-route-lang="de"><img src="images/flag-german.png" style="width:100%;" /></a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header text-center">
             <p>France</p>
-            </div>
-            <div class="card-body">
-               <a asp-controller="Home" asp-action="FlagFrench"><img src="images/flag-france.png" style="width:100%;"/></a>
-                
-            </div>
         </div>
+        <div class="card-body">
+            <a asp-controller="Home" asp-action="CheckLiterate" asp-route-lang="fr"><img src="images/flag-france.png" style="width:100%;" /></a>
+
+        </div>
+    </div>
     <div class="card">
         <div class="card-header text-center">
             <p>Italiano</p>
         </div>
         <div class="card-body">
-            <a asp-controller ="Home" asp-action="FlagItalian"><img src="images/flag-italia.png" style="width:100%;" /></a>
+            <a asp-controller="Home" asp-action="CheckLiterate" asp-route-lang="it"><img src="images/flag-italia.png" style="width:100%;" /></a>
 
         </div>
     </div>
-    </div>
+</div>

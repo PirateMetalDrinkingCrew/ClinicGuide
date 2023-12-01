@@ -28,15 +28,7 @@ namespace WebAppTest.Controllers
             return View();
         }
 
-        public IActionResult FlagGerman()
-        {
-            return View();
-        }
-        public IActionResult FlagItalian()
-        {
-            return View();
-        }
-        public IActionResult FlagFrench()
+        public IActionResult CheckLiterate()
         {
             return View();
         }
