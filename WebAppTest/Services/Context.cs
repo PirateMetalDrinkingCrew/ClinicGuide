@@ -5,7 +5,7 @@ using WebAppTest.Models;
 
 namespace WebAppTest.Services
 {
-    
+
 
     public class Context :DbContext
     {
@@ -20,7 +20,7 @@ namespace WebAppTest.Services
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+
         }
     }
 }
