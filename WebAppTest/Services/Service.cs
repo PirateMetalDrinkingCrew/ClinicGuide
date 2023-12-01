@@ -28,7 +28,7 @@ namespace WebAppTest.Services
 
             // Stammdaten
             // deutsch
-            MasterData stammdaten_deutsch = new MasterData();
+            MasterDataForm stammdaten_deutsch = new MasterDataForm();
             stammdaten_deutsch.LanguageId = deutsch;
             stammdaten_deutsch.Surname = "Name";
             stammdaten_deutsch.FirstName = "Vorname";
@@ -47,7 +47,7 @@ namespace WebAppTest.Services
             _database.Stammdaten.Add(stammdaten_deutsch);
 
             // franzoesisch
-            MasterData stammdaten_franzoesisch = new MasterData();
+            MasterDataForm stammdaten_franzoesisch = new MasterDataForm();
             stammdaten_franzoesisch.LanguageId = franzoesisch;
             stammdaten_franzoesisch.Surname = "Nom";
             stammdaten_franzoesisch.FirstName = "Prénom";
@@ -66,7 +66,7 @@ namespace WebAppTest.Services
             _database.Stammdaten.Add(stammdaten_franzoesisch);
 
             // italienisch
-            MasterData stammdaten_italienisch = new MasterData();
+            MasterDataForm stammdaten_italienisch = new MasterDataForm();
             stammdaten_italienisch.LanguageId = italienisch;
             stammdaten_italienisch.Surname = "Nom";
             stammdaten_italienisch.FirstName = "Prénom";
@@ -86,7 +86,7 @@ namespace WebAppTest.Services
 
             // Anamnese
             // deutsch
-            Anamnesis anamnese_deutsch = new Anamnesis();
+            AnamnesisForm anamnese_deutsch = new AnamnesisForm();
             anamnese_deutsch.LanguageId = deutsch;
             anamnese_deutsch.Fever = "Fieber";
             anamnese_deutsch.Headache = "Kopfschmerzen";
@@ -107,7 +107,7 @@ namespace WebAppTest.Services
             _database.Anamnese.Add(anamnese_deutsch);
 
             // franzoesisch
-            Anamnesis anamnese_franzoesisch = new Anamnesis();
+            AnamnesisForm anamnese_franzoesisch = new AnamnesisForm();
             anamnese_franzoesisch.LanguageId = franzoesisch;
             anamnese_franzoesisch.Fever = "Fièvre";
             anamnese_franzoesisch.Headache = "Maux de tête";
@@ -128,7 +128,7 @@ namespace WebAppTest.Services
             _database.Anamnese.Add(anamnese_franzoesisch);
 
             // italienisch
-            Anamnesis anamnese_italienisch = new Anamnesis();
+            AnamnesisForm anamnese_italienisch = new AnamnesisForm();
             anamnese_italienisch.LanguageId = italienisch;
             anamnese_italienisch.Fever = "febbre";
             anamnese_italienisch.Headache = "Mal di testa";

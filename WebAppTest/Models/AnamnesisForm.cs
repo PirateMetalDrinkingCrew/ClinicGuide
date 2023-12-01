@@ -1,6 +1,6 @@
 namespace WebAppTest.Models
 {
-    public class Anamnesis
+    public class AnamnesisForm
     {
         public int Id { get; set; }
         public Language LanguageId { get; set; }
