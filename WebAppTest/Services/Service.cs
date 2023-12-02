@@ -185,6 +185,11 @@ namespace WebAppTest.Services
             return _database.AnamnesisForm.Where(af=>af.LanguageId.Value == v).First();
         }
 
+        internal MasterDataForm GetMasterDataForm(string v)
+        {
+            return _database.MasterDataForm.Where(af => af.LanguageId.Value == v).First();
+        }
+
         internal Language GetLanguageByValue(string name)
         {
             return _database.Language.Where(l => l.Value == name).First();
