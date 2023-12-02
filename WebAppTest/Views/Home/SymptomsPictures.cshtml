@@ -1,9 +1,14 @@
-﻿@model Anamnesis
+﻿@model WebAppTest.Models.Anamnesis
+
+@{
+    ViewData["Title"] = "Symptoms";
+}
+
 
 <div class="container-fluid">
     <div class="card">
         <div class="card-body">
-            <input type="checkbox" id="1" />
+            <input type="checkbox" id="1" asp-for="Fever" />
             <label for="1">
                 <img src="~/images/symptoms/Fever.JPG" style="width: 100%;" />
             </label>
@@ -12,7 +17,7 @@
 
     <div class="card">
         <div class="card-body">
-            <input type="checkbox" id="2" />
+            <input type="checkbox" id="2" asp-for="Headache" />
             <label for="2">
                 <img src="~/images/symptoms/Headache.JPG" style="width: 100%;" />
             </label>
@@ -21,7 +26,7 @@
 
     <div class="card">
         <div class="card-body">
-            <input type="checkbox" id="5" />
+            <input type="checkbox" id="3" asp-for="AbdominalPain" />
             <label for="5">
                 <img src="~/images/symptoms/stomach.JPG" style="width: 100%;" />
             </label>
@@ -31,26 +36,26 @@
 <div class="container-fluid">
     <div class="card">
         <div class="card-body">
-            <input type="checkbox" id="6" />
+            <input type="checkbox" id="4" asp-for="SoreThroat" />
             <label for="1">
                 <img src="~/images/symptoms/Throat.JPG" style="width: 100%;" />
             </label>
         </div>
     </div>
 
-    <div class="card">
+@*     <div class="card">
         <div class="card-body">
-            <input type="checkbox" id="7" />
+            <input type="checkbox" id="5" asp-for="kne" />
             <label for="2">
                 <img src="~/images/symptoms/Knee.JPG" style="width: 100%;" />
             </label>
         </div>
-    </div>
+    </div> *@
 
     <div class="card">
         <div class="card-body">
-            <input type="checkbox" id="8" />
-            <label for="5">
+            <input type="checkbox" id="6" asp-for="ElbowPain" />
+            <label for="4">
                 <img src="~/images/symptoms/Elbow.JPG" style="width: 100%;" />
             </label>
         </div>
