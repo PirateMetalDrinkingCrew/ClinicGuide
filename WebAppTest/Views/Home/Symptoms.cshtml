@@ -1,0 +1,110 @@
+﻿@model WebAppTest.Models.Anamnesis
+
+@{
+    ViewData["Title"] = "Symptoms";
+}
+
+<h1>Symptoms</h1>
+
+<h4>Anamnesis</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Symptoms">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Fever" /> Oh leck, ich habe @Html.DisplayNameFor(model => model.Fever)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Headache" /> @Html.DisplayNameFor(model => model.Headache)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Cold" /> @Html.DisplayNameFor(model => model.Cold)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Cough" /> @Html.DisplayNameFor(model => model.Cough)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="NasalSinusPain" /> @Html.DisplayNameFor(model => model.NasalSinusPain)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="EyePain" /> @Html.DisplayNameFor(model => model.EyePain)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="BoneFracture" /> @Html.DisplayNameFor(model => model.BoneFracture)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="SoreThroat" /> @Html.DisplayNameFor(model => model.SoreThroat)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AbdominalPain" /> @Html.DisplayNameFor(model => model.AbdominalPain)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LimbPain" /> @Html.DisplayNameFor(model => model.LimbPain)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ElbowPain" /> @Html.DisplayNameFor(model => model.ElbowPain)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HighBloodPressure" /> @Html.DisplayNameFor(model => model.HighBloodPressure)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HeartAttack" /> @Html.DisplayNameFor(model => model.HeartAttack)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Stroke" /> @Html.DisplayNameFor(model => model.Stroke)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ThyroidDisease" /> @Html.DisplayNameFor(model => model.ThyroidDisease)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Diabetes" /> @Html.DisplayNameFor(model => model.Diabetes)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
