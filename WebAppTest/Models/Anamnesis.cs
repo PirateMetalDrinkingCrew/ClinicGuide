@@ -2,6 +2,8 @@ namespace WebAppTest.Models
 {
     public class Anamnesis
     {
+        public DateTime TimeStamp { get; set; } = DateTime.Now;
+        public MasterData PersonGUID { get; set; }
         public int Id { get; set; }
         public string IdLabel { get; set; }
         public bool Fever { get; set; }
@@ -9,8 +11,6 @@ namespace WebAppTest.Models
         public bool HeartAttack { get; set; }
         public string HeartAttackLabel { get; set; }
         public bool Headache { get; set; }
-
-
         public string HeadacheLabel { get; set; }
         public bool Cold { get; set; }
         public string ColdLabel { get; set; }
