@@ -180,6 +180,11 @@ namespace WebAppTest.Services
             }
         }
 
+        internal AnamnesisForm GetAnamnesisForm(string v)
+        {
+            return _database.AnamnesisForm.Where(af=>af.LanguageId.Value == v).First();
+        }
+
         internal void ReadDataBase()
         {
             _database.Language.ForEachAsync(x =>
