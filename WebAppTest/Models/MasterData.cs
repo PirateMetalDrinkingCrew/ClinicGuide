@@ -5,6 +5,10 @@ namespace WebAppTest.Models
     public class MasterData
     {
         public int Id { get; set; }
+
+        public Guid PersonGUID { get; set; } = Guid.NewGuid();
+
+        public Language LanguageId { get; set; } = null!;
         public string Surname { get; set; } = string.Empty;
         public string FirstName { get; set; } = string.Empty;
         public DateTime DateOfBirth	{ get; set; }

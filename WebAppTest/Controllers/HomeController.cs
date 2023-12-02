@@ -15,7 +15,7 @@ namespace WebAppTest.Controllers
         {
             _logger = logger;
             _service = service;
-            _service.FillDatabase(); // Mit vorsicht genießen, sonst wird bei jedem klick diese funktion ausgeführt und die daten nochmal eingefügt. ein mal ausführen und dann auskommentieren
+            //_service.FillDatabase(); // Mit vorsicht genießen, sonst wird bei jedem klick diese funktion ausgeführt und die daten nochmal eingefügt. ein mal ausführen und dann auskommentieren
             _service.ReadDataBase();
         }
 
@@ -37,7 +37,25 @@ namespace WebAppTest.Controllers
 
         public IActionResult Symptoms()
         {
-            return View();
+            var anamnesisForm = _service.GetAnamnesisForm("french");
+            var anamnesis = new Anamnesis();
+            anamnesis.FeverLabel = anamnesisForm.Fever;
+            anamnesis.HeadacheLabel = anamnesisForm.Headache;
+            anamnesis.ColdLabel = anamnesisForm.Cold;
+            anamnesis.CoughLabel = anamnesisForm.Cough;
+            anamnesis.NasalSinusPainLabel = anamnesisForm.NasalSinusPain;
+            anamnesis.EyePainLabel = anamnesisForm.EyePain;
+            anamnesis.BoneFractureLabel = anamnesisForm.BoneFracture;
+            anamnesis.SoreThroatLabel = anamnesisForm.SoreThroat;
+            anamnesis.AbdominalPainLabel = anamnesisForm.AbdominalPain;
+            anamnesis.LimbPainLabel = anamnesisForm.LimbPain;
+            anamnesis.ElbowPainLabel = anamnesisForm.ElbowPain;
+            anamnesis.HighBloodPressureLabel = anamnesisForm.HighBloodPressure;
+            anamnesis.HeartAttackLabel = anamnesisForm.HeartAttack;
+            anamnesis.StrokeLabel = anamnesisForm.Stroke;
+            anamnesis.ThyroidDiseaseLabel = anamnesisForm.ThyroidDisease;
+            anamnesis.DiabetesLabel = anamnesisForm.Diabetes;
+            return View(anamnesis);
         }
 
         public IActionResult SymptomsPictures()
