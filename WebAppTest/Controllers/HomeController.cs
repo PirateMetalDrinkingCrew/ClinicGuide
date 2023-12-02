@@ -55,6 +55,26 @@ namespace WebAppTest.Controllers
             anamnesis.DiabetesLabel = anamnesisForm.Diabetes;
             return View(anamnesis);
         }
+        public IActionResult MasterData()
+        {
+            var masterDataForm = _service.GetMasterDataForm("french");
+            var masterData = new MasterData();
+            masterData.SurnameLabel = masterDataForm.Surname;
+            masterData.FirstNameLabel = masterDataForm.FirstName;
+            masterData.DateOfBirthLabel = masterDataForm.DateOfBirth;
+            masterData.StreetLabel = masterDataForm.Street;
+            masterData.HouseNumberLabel = masterDataForm.HouseNumber;
+            masterData.PlaceOfResidenceLabel = masterDataForm.PlaceOfResidence;
+            masterData.NationalityLabel = masterDataForm.Nationality;
+            masterData.GenderLabel = masterDataForm.Gender;
+            masterData.HealthInsuranceLabel = masterDataForm.HealthInsurance;
+            masterData.KvNumberLabel = masterDataForm.KvNumber;
+            masterData.ForeignHealthInsuranceLabel = masterDataForm.ForeignHealthInsurance;
+            masterData.RefugeeStatusLabel = masterDataForm.RefugeeStatus;
+            masterData.HeightLabel = masterDataForm.Height;
+            masterData.WeightLabel = masterDataForm.Weight;
+            return View(masterData);
+        }
 
         public IActionResult SymptomsPictures()
         {
