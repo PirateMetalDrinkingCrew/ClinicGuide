@@ -14,7 +14,7 @@ namespace WebAppTest.Controllers
         {
             _logger = logger;
             _service = service;
-            //_service.FillDatabase(); // Mit vorsicht genießen, sonst wird bei jedem klick diese funktion ausgeführt und die daten nochmal eingefügt. ein mal ausführen und dann auskommentieren
+            _service.FillDatabase(); // Mit vorsicht genießen, sonst wird bei jedem klick diese funktion ausgeführt und die daten nochmal eingefügt. ein mal ausführen und dann auskommentieren
             _service.ReadDataBase();
         }
 
@@ -29,6 +29,11 @@ namespace WebAppTest.Controllers
         }
 
         public IActionResult CheckLiterate()
+        {
+            return View();
+        }
+
+        public IActionResult Symptoms()
         {
             return View();
         }
