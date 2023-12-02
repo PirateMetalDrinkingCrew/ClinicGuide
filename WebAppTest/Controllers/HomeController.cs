@@ -9,6 +9,7 @@ namespace WebAppTest.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly Service _service;
+        private MasterData _currentData = new MasterData();
 
         public HomeController(ILogger<HomeController> logger, Service service)
         {
@@ -30,6 +31,7 @@ namespace WebAppTest.Controllers
 
         public IActionResult CheckLiterate()
         {
+            //_currentData.lan
             return View();
         }
 
