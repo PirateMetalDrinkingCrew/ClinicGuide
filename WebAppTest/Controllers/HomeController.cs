@@ -9,13 +9,12 @@ namespace WebAppTest.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly Service _service;
-        private MasterData _currentData = new MasterData();
 
         public HomeController(ILogger<HomeController> logger, Service service)
         {
             _logger = logger;
             _service = service;
-            //_service.FillDatabase(); // Mit vorsicht genießen, sonst wird bei jedem klick diese funktion ausgeführt und die daten nochmal eingefügt. ein mal ausführen und dann auskommentieren
+            _service.FillDatabase(); // Mit vorsicht genießen, sonst wird bei jedem klick diese funktion ausgeführt und die daten nochmal eingefügt. ein mal ausführen und dann auskommentieren
             _service.ReadDataBase();
         }
 
@@ -29,9 +28,10 @@ namespace WebAppTest.Controllers
             return View();
         }
 
-        public IActionResult CheckLiterate()
+        public IActionResult CheckLiterate(string lang)
         {
-            //_currentData.lan
+            //Language currentLang = _service.GetLanguageByValue(lang);
+            //_currentData.LanguageId = currentLang;
             return View();
         }
 
